@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(chmod +x /home/ben/Code/sample-csharp-tray-app/build.sh)"
+    ]
+  }
+}

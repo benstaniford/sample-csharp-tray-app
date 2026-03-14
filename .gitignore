@@ -416,3 +416,14 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# WiX Toolset
+*.wixobj
+*.wixpdb
+
+# MSBuild Binary and Structured Log
+*.binlog
+MSBuild_Logs/
+
+# Publish output
+publish/
