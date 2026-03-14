@@ -15,11 +15,12 @@ internal sealed partial class MainWindow : Window
     {
         var version = Assembly.GetExecutingAssembly()
             .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion ?? "dev";
-        MessageBox.Show(
-            $"Sample Tray App v{version}\n\nA sample Windows system tray application.",
-            "About Sample Tray App",
-            MessageBoxButton.OK,
-            MessageBoxImage.Information);
+        Dispatcher.BeginInvoke(() =>
+            MessageBox.Show(
+                $"Sample Tray App v{version}\n\nA sample Windows system tray application.",
+                "About Sample Tray App",
+                MessageBoxButton.OK,
+                MessageBoxImage.Information));
     }
 
     private void Exit_Click(object sender, RoutedEventArgs e)
