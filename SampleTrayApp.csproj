@@ -7,6 +7,7 @@
     <Nullable>enable</Nullable>
     <ApplicationIcon>icons\app.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <DefaultItemExcludes>$(DefaultItemExcludes);SampleTrayApp.Tests\**</DefaultItemExcludes>
   </PropertyGroup>
 
   <ItemGroup>
