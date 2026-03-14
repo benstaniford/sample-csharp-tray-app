@@ -16,7 +16,7 @@ dotnet build SampleTrayApp.csproj -c Release
 dotnet test SampleTrayApp.Tests/SampleTrayApp.Tests.csproj
 
 # Publish
-dotnet publish SampleTrayApp.csproj -c Release -o bin/Release/net8.0-windows/publish
+dotnet publish SampleTrayApp.csproj -c Release -o bin/Release/net10.0-windows/publish
 
 # Create a release (increments patch version, tags, and pushes)
 ./scripts/make-release
