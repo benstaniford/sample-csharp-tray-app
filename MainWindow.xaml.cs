@@ -3,7 +3,8 @@ using System.Windows;
 
 namespace SampleTrayApp;
 
-internal partial class MainWindow : Window
+[System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1812:Avoid uninstantiated internal classes", Justification = "Instantiated by WPF XAML framework")]
+internal sealed partial class MainWindow : Window
 {
     public MainWindow()
     {

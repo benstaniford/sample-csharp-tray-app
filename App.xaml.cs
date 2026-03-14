@@ -2,6 +2,6 @@ using System.Windows;
 
 namespace SampleTrayApp;
 
-internal partial class App : Application
+internal sealed partial class App : Application
 {
 }
