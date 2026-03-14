@@ -77,10 +77,10 @@ jobs:
         run: dotnet restore SampleTrayApp.csproj
 
       - name: Build application
-        run: dotnet build SampleTrayApp.csproj -c Release --no-restore
+        run: dotnet build SampleTrayApp.csproj -c Release --no-restore -p:Version=${{ steps.version.outputs.NUMERIC_VERSION }}
 
       - name: Publish application
-        run: dotnet publish SampleTrayApp.csproj -c Release -o bin/Release/net8.0-windows/publish --no-build
+        run: dotnet publish SampleTrayApp.csproj -c Release -o bin/Release/net8.0-windows/publish --no-build -p:Version=${{ steps.version.outputs.NUMERIC_VERSION }}
 
       - name: Build WiX Installer
         run: |
