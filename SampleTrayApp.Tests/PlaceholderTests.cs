@@ -1,3 +1,5 @@
+using Xunit;
+
 namespace SampleTrayApp.Tests;
 
 public class PlaceholderTests
