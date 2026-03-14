@@ -79,6 +79,9 @@ jobs:
       - name: Build application
         run: dotnet build SampleTrayApp.csproj -c Release --no-restore -p:Version=${{ steps.version.outputs.NUMERIC_VERSION }}
 
+      - name: Run tests
+        run: dotnet test SampleTrayApp.Tests/SampleTrayApp.Tests.csproj -c Release --logger "console;verbosity=normal"
+
       - name: Publish application
         run: dotnet publish SampleTrayApp.csproj -c Release -o bin/Release/net8.0-windows/publish --no-build -p:Version=${{ steps.version.outputs.NUMERIC_VERSION }}
 
